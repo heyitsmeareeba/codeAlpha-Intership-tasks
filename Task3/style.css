@@ -1,0 +1,423 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--bg-color) var(--main-color);
+    font-family: 'poppins', 'sans serif';
+
+}
+:root{
+    --bg-color:  #000000;
+    --text-color: #c8abe9 ;
+    --second-bg-color:#8147dd;
+    --main-color: #49079e;
+}
+html{
+    font: 62.5%;
+    overflow-x:hidden;
+
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: sticky;
+    top:0;
+    left:0;
+    padding:1rem 9%;
+    width: 100%;
+    background:var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+    border-bottom: var(--main-color) .5rem solid;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-family: 'dancing script';
+    cursor:default;
+    margin:0;
+    padding: 0;
+    font-weight: 600;
+   position: flex-start;
+}
+.logo:hover{
+    color: var(--main-color);
+}
+.navbar {
+    display: flex;
+    gap: 20px; /* Space between nav links */
+
+  }
+.navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-left: 4rem;
+    transition: 1s;
+    
+}
+.navbar a:hover, .navbar a.active{
+    color: var(--main-color);
+}
+#menu-icon{
+    display: none;
+    color: var(--main-color);
+    font-size: 3.6rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px;
+    gap: 4%;
+}
+.homeContent h3{
+    font-size: 2.5rem;
+    font-weight: 400;
+   
+}
+.homeContent h2{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height:1.3;
+    color: var(--second-bg-color);
+}
+.homeContent p{
+    font-size: 1.6rem;
+
+}
+.my-img img{
+     width: 29%;
+    position: absolute; /* Position absolutely relative to the .about section */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(44%, -48%); /* Offset by half its width and height for perfect centering */
+    z-index: 10; 
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 46%;
+}
+
+
+.socials a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent ;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+   cursor: pointer;
+}
+.socials a:hover{
+    color: var(--text-color);
+    font-size: 40px;
+    border: none;
+}
+/*About  section*/
+.aboutme{
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+   color: var(--second-bg-color);
+}
+svg{
+    width: 750px;
+    height: 750px;
+  
+}
+.img img{
+    width: 32.5%;
+    position: absolute; /* Position absolutely relative to the .about section */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-130%, 110%); /* Offset by half its width and height for perfect centering */
+    z-index: 10; 
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 46%;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    gap: 2%;
+}
+.Abouttext h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+.Abouttext p{
+    font-size: 20px;
+    margin-bottom: 35px;
+    
+}
+.btn
+{
+    padding: 20px;
+    font-size: 20px; 
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 4%;
+    transition: 1s;
+}
+.btn:hover{
+    font-size: 30px;
+    font-weight: 500;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
+/*Project section*/
+.projects .proj{
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+   color: var(--second-bg-color);
+}
+.project{
+    display: flex;
+}
+.project-row{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+align-items: center;
+gap:20px;
+}
+.project-1{
+    position:relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+}
+.project-1 img{
+    width: 100%;
+    transition:.5s;
+}
+.project-1:hover img{
+    transform: scale(1.1);
+}
+.projText{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--bg-color);
+    background: linear-gradient(rgba(176, 142, 214, 0.678), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(100%);
+    transition: 1s;
+}
+
+.project-1:active .projText{
+    transform: translateY(0%);
+}
+.projText h3{
+   font-size: 35px;
+
+}
+.projText p{
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+}
+.projText a{
+    font-size: 20px;
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    padding: 10px;
+    border-radius: 5%;
+}
+/*Contact me section*/
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box
+{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: linear-gradient( var(--second-bg-color), rgba(54, 40, 58, 0.5));
+    border-radius: 4rem;
+    font-size: 20px;
+    padding: 40px;
+    border: black 10px solid;
+}
+.contact form .input-box input{
+    width: 50%;
+   
+}
+/*Footer section*/
+.footer{
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer .footerText{
+    text-align: center;
+    width: 92%;
+}
+.footerIcon i{
+    color: var(--text-color);
+    background-color: var(--main-color);
+    font-size: 30px;
+    border-radius: 40%;
+    margin-right: 0;
+
+}
+/*Keyframe aniamtions*/
+/* Slide In */
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Out */
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Zoom In */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Zoom Out */
+  @keyframes zoomOut {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  
+  /* Fade In */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Fade Out */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  /* Slide Up */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Down */
+  @keyframes slideDown {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Usage Classes */
+  .slide-in {
+    animation: slideIn 1s ease-in-out forwards;
+  }
+  
+  .slide-out {
+    animation: slideOut 1s ease-in-out forwards;
+  }
+  
+  .zoom-in {
+    animation: zoomIn 1s ease-in-out forwards;
+  }
+  
+  .zoom-out {
+    animation: zoomOut 1s ease-in-out forwards;
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 1s ease-in-out forwards;
+  }
+  
+  .slide-down {
+    animation: slideDown 1s ease-in-out forwards;
+  }
+  
